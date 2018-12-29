@@ -1,0 +1,11 @@
+{
+  "name": "voc-uploader",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.2.1",
+    "sqlite3": "^4.0.4",
+    "voc-api": "../voc-api"
+  }
+}
