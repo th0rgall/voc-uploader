@@ -36,13 +36,48 @@ function uploadLookups(book) {
                 word: a.word,
                 example: a.usage
             }}
-        )
-        voc.login(config.voc_username, config.voc_password).then(() => {
-            voc.addToNewList(wordList, book.title, "Vocabulary Builder list uploaded from Kindle with voc-uploader.", false)
-            .then(console.log);
-        })
+        ).filter( ({word}) => word && word.length > 1);
+
+        //
+        inquirer.prompt([{
+            type: 'list',
+            message: 'Upload all words from the book, or select them?',
+            name: "selectChoice",
+            choices: ["Select manually", "Upload all"]
+        }]).then(answers => {
+            console.log(answers);
+            if (answers.selectChoice === 'Select manually') {
+                const exampleCutoff = 100;
+
+                inquirer.prompt([{
+                    type: 'checkbox',
+                    message: 'Select the words to upload',
+                    name: "selectChoice",
+                    // choices: wordList.map(({word, example}, i) => ({
+                    //     name: `${word} (${example})`,
+                    //     value: `${i}${word}` 
+                    // })),
+                    choices: wordList.map((wordObject) => ({
+                        name: `${wordObject.word} - ${wordObject.example.slice(0, exampleCutoff)}${
+                            wordObject.exampleCutoff.length > exampleCutoff ? "..." : ""}`,
+                        value: wordObject,
+                        checked: true,
+                    }))
+                }]).then(answers => addWordList(book, answers.selectChoice));
+            } else {
+                addWordList(book, wordList)
+            }
+        });
+
 
     })
+}
+
+function addWordList(book, wordList) {
+    voc.login(config.voc_username, config.voc_password).then(() => {
+        voc.addToNewList(wordList, book.title, "Vocabulary Builder list uploaded from Kindle with voc-uploader.", false)
+        .then(console.log);
+    });
 }
 
 function close() {
