@@ -59,7 +59,7 @@ function uploadLookups(book) {
                     // })),
                     choices: wordList.map((wordObject) => ({
                         name: `${wordObject.word} - ${wordObject.example.slice(0, exampleCutoff)}${
-                            wordObject.exampleCutoff.length > exampleCutoff ? "..." : ""}`,
+                            wordObject.length > exampleCutoff ? "..." : ""}`,
                         value: wordObject,
                         checked: true,
                     }))
