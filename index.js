@@ -62,7 +62,8 @@ function uploadLookups(book) {
                             wordObject.length > exampleCutoff ? "..." : ""}`,
                         value: wordObject,
                         checked: true,
-                    }))
+                    })),
+                    pageSize: 25
                 }]).then(answers => addWordList(book, answers.selectChoice));
             } else {
                 addWordList(book, wordList)
