@@ -531,10 +531,6 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lodash.clone@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
-
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -542,6 +538,10 @@ lodash.sortby@^4.7.0:
 lodash@^4.13.1, lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
+lodash@^4.17.13:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
 
 mime-db@~1.37.0:
   version "1.37.0"
@@ -1038,9 +1038,9 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 voc-api@../voc-api:
-  version "0.1.5"
+  version "0.1.9"
   dependencies:
-    lodash.clone "^4.5.0"
+    lodash "^4.17.13"
     voc-dom th0rgall/voc-dom
     voc-http th0rgall/voc-http
 
