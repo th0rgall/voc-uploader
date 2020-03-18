@@ -2,7 +2,7 @@
 
 A simple CLI app to upload the dictionary lookups from any book on your Amazon Kindle to a vocabulary.com list.
 
-Enabled by on my other project, the unofficial [Vocabulary.com API](https://github.com/th0rgall/voc-api).
+Enabled by the unofficial [Vocabulary.com API (GitHub)](https://github.com/th0rgall/voc-api).
 
 ### 1 - Select the lookups you want to upload (in CLI)
 
