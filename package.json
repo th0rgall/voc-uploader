@@ -10,6 +10,6 @@
   "dependencies": {
     "inquirer": "^6.2.1",
     "sqlite3": "^4.0.4",
-    "voc-api": "../voc-api"
+    "voc-api": "th0rgall/voc-api#feature/cookie-login"
   }
 }
