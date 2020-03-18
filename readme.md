@@ -1,10 +1,19 @@
 # Voc Uploader
 
-A simple CLI app to upload the dictionary lookups from an Amazon Kindle for a particular book to a vocabulary.com list. Makes it eaier to centralize your word learning to vocabulary.com.
+A simple CLI app to upload the dictionary lookups from any book on your Amazon Kindle to a vocabulary.com list.
+
+Enabled by on my other project, the unofficial [Vocabulary.com API](https://github.com/th0rgall/voc-api).
+
+### 1 - Select the lookups you want to upload (in CLI)
+
+![](https://i.imgur.com/josPQJI.png)
+
+### 2 - Learn them in vocabulary.com
+![](https://i.imgur.com/aZOMtQs.png)
 
 For everyone who thinks [learning words on a Kindle device](https://www.dummies.com/consumer-electronics/tablets/kindle/how-to-use-vocabulary-builder-on-your-kindle-paperwhite/) is not the best way. This app joins [a range](https://github.com/search?p=1&q=kindle+vocabulary&type=Repositories) of other projects that do the same for other vocabulary services ([Memrise](https://github.com/jaroslawhartman/kindle-to-memrise), [ANKI](https://github.com/NdYAG/Kindle2Anki)), ...
 
-Currently in a proof-of-concept state.
+Currently in a working proof-of-concept state.
 
 ## Installation
 
@@ -26,8 +35,11 @@ Currently in a proof-of-concept state.
 Run `node index.js`
 An interactive CLI will guide you through the process of uploading a list for a book.
 
-## TODO
+
+## Wishlist
 
 - [ ] Interactive Kindle device handling (plug & play, no explicit vocab.db reference)
 - [ ] A GUI to (de)select unintended words at upload time.
 - [ ] Testing/support for more e-readers with this function
+
+You may also be interested in: [Voc Enhancer (GitHub)](https://github.com/th0rgall/voc-enhancer), the browser plugin that enhances word collection & learning in vocabulary.com.
